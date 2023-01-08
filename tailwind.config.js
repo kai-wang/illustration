@@ -7,6 +7,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        'sm': {
+          'min': '320px',
+          'max': '768px'
+        }
+      },
       colors: {
         'blue': {
           "1": "var(--primary-blue)"

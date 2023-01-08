@@ -4,10 +4,9 @@ function Intro() {
   return (
     <section
       id="intro"
-      className="relative overflow-hidden min-h-[600px] pt-40"
     >
       <div className="top-right-gradient"></div>
-      <div className="w-full max-w-6xl mx-auto">
+      <div className="w-full max-w-6xl m-0">
         <div className="intro-left">
           <h1>Creative Insights to grow your Business</h1>
           <p>
@@ -18,15 +17,14 @@ function Intro() {
             Try it for free
           </a>
         </div>
-        <div className="relative inline-block ml-24 pt-20">
+        <div className="intro-right">
           <img
-            className="max-w-[650px]"
             src="images/undraw_growth_analytics_8btt.png"
-            alt=""
+            alt="image"
           />
         </div>
       </div>
-      <div className="absolute bottom-2 left-n-9 w-48 h-48 rounded-1/2 bg-gradient-to-tr from-fuchsia-400 to-cyan-500"></div>
+      <div className="bottom-left-gradient"></div>
     </section>
   );
 }

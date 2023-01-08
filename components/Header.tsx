@@ -1,37 +1,55 @@
-import React from "react";
+import React, { useState } from "react";
 import config from "../data/config.json";
+import { XMarkIcon, Bars3BottomLeftIcon } from "@heroicons/react/24/solid";
 
 function Header() {
   const items = config.headers;
+  const [open, setOpen] = useState(false);
+  const handleClick = () => {
+    setOpen(!open);
+  };
 
   return (
-    <header className="absolute z-999 w-full py-4">
-      <div className="w-full flex items-center justify-between mx-auto max-w-6xl">
-        <div className="max-w-4xl">
-          <a href="/" className="no-underline">
+    <header className={`${!open ? '' : 'active'} absolute z-999 w-full md:py-6 sm:p-0 sm:bg-white`}>
+      <div className="w-full max-w-6xl m-0">
+        {/** logo */}
+          <a href="/">
             <img
-              className="w-40 -ml-3 pr-20 py-2"
               src="images/logo.svg"
               alt="logo"
             />
           </a>
-        </div>
-        <ul className="mx-auto flex">
+
+        {/** hidden button for mobile version */}
+        <button
+          id="submenu"
+          onClick={handleClick}
+        >
+          {!open ? <Bars3BottomLeftIcon /> : <XMarkIcon />}
+        </button>
+
+        {/** left side menu */}
+        <ul
+          className='menu-left'
+        >
           {items.map((item, index) => {
             return (
-              <li key={index} className="px-5 inline-block">
+              <li key={index}>
                 <a href={item.href ?? "#"}>{item.text}</a>
               </li>
             );
           })}
         </ul>
-        <ul className="flex">
-          <a href="/" className="text-red-600 font-medium">
-            <li className="w-[120px] p-2 rounded-[3px] text-center bg-white shadow-md">
-              Get Started
+
+        {/** right side menu */}
+        <ul className="menu-right">
+        <li className="menu-cta">
+                <a href="#">
+                    Get Started
+                </a>
             </li>
-          </a>
         </ul>
+
       </div>
     </header>
   );
