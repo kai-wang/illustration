@@ -10,57 +10,6 @@
 
 @layer components {
 
-  header img {
-    float: left;
-    width: 200px;
-    margin-left: -12px;
-    padding: 13px 140px 20px 0;
-  }
-
-  header ul.menu-left {
-    float: left;
-  }
-
-  header ul.menu-left li {
-    display: inline-block;
-    padding: 20px;
-  }
-
-  header ul.menu-left li a {
-    color: #606c7c;
-    transition: ease-in 0.2s;
-  }
-
-  header ul.menu-left li a:hover {
-    color: rgb(248, 38, 84);
-  }
-
-  header ul.menu-right {
-    float: right;
-  }
-
-  header ul.menu-right li.menu-cta {
-    width: 150px;
-    margin-top: 0.7em;
-    padding: 0.5em;
-    transition: 0.3s all ease;
-    text-align: center;
-    border-radius: 3px;
-    background: white;
-    box-shadow: 2px 4px 9px 1px rgba(0, 0, 0, 0.05);
-  }
-
-  header ul.menu-right li.menu-cta a {
-    font-weight: 500;
-    color: rgb(248, 38, 84);
-  }
-
-  #intro {
-    position: relative;
-    overflow: hidden;
-    min-height: 600px;
-    padding-top: 9em;
-  }
 
   #intro .top-right-gradient {
     position: absolute;
@@ -139,13 +88,6 @@
   }
 
   /* About */
-
-  #about .about-right {
-    display: inline-block;
-    width: 100%;
-    max-width: 400px;
-    margin-left: 10em;
-  }
 
   #about .about-right h1 {
     font-size: 2.5em;
@@ -227,94 +169,7 @@
       box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.2);
     }
 
-    header button {
-      position: absolute;
-      top: 12px;
-      right: 25px;
-      display: block;
-      width: 30px;
-      height: 40px;
-      padding-top: 6px;
-      border: none;
-      background: #fff;
-    }
-
-    header button span {
-      position: relative;
-      top: 0;
-      display: block;
-      width: 100%;
-      height: 2px;
-      margin-bottom: 5px;
-      transition: all 0.25s ease;
-      border-radius: 15px;
-      background: #0d2366;
-    }
-
-    header button span:nth-child(2) {
-      right: 0;
-      width: 80%;
-      opacity: 1;
-    }
-
-    header button span:nth-child(3) {
-      width: 60%;
-    }
-
-    header.active button span:nth-child(1) {
-      top: 8px;
-      left: -4px;
-      -ms-transform: rotate(38deg);
-      transform: rotateZ(38deg);
-    }
-
-    header.active button span:nth-child(2) {
-      right: -100%;
-      opacity: 0;
-    }
-
-    header.active button span:nth-child(3) {
-      top: -6px;
-      left: -4px;
-      width: 100%;
-      -ms-transform: rotate(-38deg);
-      transform: rotateZ(-38deg);
-    }
-
-    header ul.menu-left {
-      display: none;
-    }
-
-    header img {
-      margin-left: 20px !important;
-    }
-
-    header.active ul.menu-left {
-      display: block;
-      float: none;
-      clear: both;
-    }
-
-    header.active ul.menu-left li {
-      display: block !important;
-      padding: 10px 20px;
-    }
-
-    header ul.menu-right {
-      display: none;
-    }
-
     /* intro responsive */
-
-    #intro {
-      max-height: 300px !important;
-      text-align: center;
-      display: flex;
-      height: 100%;
-      flex-direction: column;
-      justify-content: space-around;
-      margin-top: 40px !important;
-    }
 
     #intro .bottom-left-gradient {
       position: absolute;
@@ -335,6 +190,7 @@
       height: 100px;
       border-radius: 50%;
     }
+
     #intro .intro-right img {
       width: 380px;
     }
@@ -349,6 +205,28 @@
     }
 
     #intro .intro-left .intro-cta {
+      display: inline-block !important;
+    }
+
+    /* About */
+    #about .about-right {
+      display: inline-block !important;
+    }
+    
+    #about .about-right h1 {
+      font-size: 24px !important;
+    }
+  
+    #about .about-right h1::after {
+      margin-left: 180px;
+      margin-bottom: 10px;
+    }
+  
+    #about .about-right p {
+      font-size: 16px !important;
+    }
+  
+    #about .about-right a {
       display: inline-block !important;
     }
   }
