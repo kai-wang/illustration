@@ -8,8 +8,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'x-blue': '#241b57',
-        'x-red': '#ec4357'
+        'blue': {
+          "1": "var(--primary-blue)"
+        },
+        'red': {
+          "1": "var(--primary-red)",
+          "2": "var(--secondary-red)"
+        }
       },
       inset: {
         '2/5': '40%',
@@ -17,7 +22,7 @@ module.exports = {
         'n-9': "-9%"
       },
       borderRadius: {
-        'half': '50%',
+        '1/2': '50%',
       },
       zIndex: {
         '999': '999',

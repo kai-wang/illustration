@@ -26,7 +26,7 @@ function Intro() {
           />
         </div>
       </div>
-      <div className="absolute bottom-2 left-n-9 w-48 h-48 rounded-half bg-gradient-to-tr from-fuchsia-400 to-cyan-500"></div>
+      <div className="absolute bottom-2 left-n-9 w-48 h-48 rounded-1/2 bg-gradient-to-tr from-fuchsia-400 to-cyan-500"></div>
     </section>
   );
 }

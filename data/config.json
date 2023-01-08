@@ -1,0 +1,33 @@
+{
+  "headers": [
+    {
+      "text": "How we function?",
+      "href": "#"
+    },
+    {
+      "text": "Services"
+    },
+    {
+      "text": "Pricing"
+    },
+    {
+      "text": "Contact"
+    }
+  ],
+
+  "footers": [
+    {
+      "text": "About",
+      "href": "#"
+    },
+    {
+      "text": "Services"
+    },
+    {
+      "text": "Pricing"
+    },
+    {
+      "text": "Contact"
+    }
+  ]
+}

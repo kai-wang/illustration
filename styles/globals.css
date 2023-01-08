@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --secondary-red: #ee9ca7;
+  --primary-red: #ec4357;
+  --primary-blue: #241b57;
+}
+
 @layer components {
   .top-right-gradient {
     position: absolute;
@@ -10,8 +16,8 @@
     width: 800px;
     height: 800px;
     border-radius: 50%;
-    background: linear-gradient(#ee9ca7, #ec4357);
-    background-image: linear-gradient(rgb(238, 156, 167), rgb(236, 67, 87));
+    background: linear-gradient(var(--secondary-red), var(--primary-red));
+    background-image: linear-gradient(var(--secondary-red), var(--primary-red));
     background-position-x: initial;
     background-position-y: initial;
     background-size: initial;
@@ -46,7 +52,7 @@
     height: 4px;
     content: "";
     border-radius: 5px;
-    background: #ec4357;
+    background: var(--primary-red);
     opacity: 0.4;
   }
 
@@ -65,7 +71,7 @@
     text-align: center;
     color: #fff;
     border-radius: 3px;
-    background: #ec4357;
+    background: var(--primary-red);
   }
 
   #about .about-right {
@@ -80,7 +86,7 @@
     line-height: 1.5em;
     position: relative;
     margin-bottom: 1em;
-    color: #ec4357;
+    color: var(--primary-red);
   }
 
   #about .about-right h1::after {
@@ -91,7 +97,7 @@
     height: 4px;
     content: "";
     border-radius: 5px;
-    background: #241b57;
+    background: var(--primary-blue);
     opacity: 0.2;
   }
 
@@ -112,7 +118,40 @@
     text-align: center;
     color: #fff;
     border-radius: 3px;
-    background: #241b57;
+    background: var(--primary-blue);
   }
 
+  footer .footer-connect {
+      line-height: 20px;
+      color: var(--primary-blue);
+      font-size: 12px;
+      font-weight: normal;
+      margin: 0;
+  }
+
+  footer .footer-icons {
+    margin-top: 25px;
+  }
+
+  footer .footer-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #ec4357;
+    text-align: center;
+    line-height: 35px;
+    margin-left: -5px;
+  }
+
+  footer .footer-connect span {
+    display: block;
+    color: #ec4357;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
 }

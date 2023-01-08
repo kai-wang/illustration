@@ -1,6 +1,9 @@
 import React from "react";
+import config from "../data/config.json";
 
 function Header() {
+  const items = config.headers;
+
   return (
     <header className="absolute z-999 w-full py-4">
       <div className="w-full flex items-center justify-between mx-auto max-w-6xl">
@@ -14,18 +17,13 @@ function Header() {
           </a>
         </div>
         <ul className="mx-auto flex">
-          <li className="px-5 inline-block">
-            <a href="#">How we function?</a>
-          </li>
-          <li className="px-5 inline-block">
-            <a href="#">Services</a>
-          </li>
-          <li className="px-5 inline-block">
-            <a href="#">Pricing</a>
-          </li>
-          <li className="px-5 inline-block">
-            <a href="#">Contact</a>
-          </li>
+          {items.map((item, index) => {
+            return (
+              <li key={index} className="px-5 inline-block">
+                <a href={item.href ?? "#"}>{item.text}</a>
+              </li>
+            );
+          })}
         </ul>
         <ul className="flex">
           <a href="/" className="text-red-600 font-medium">
